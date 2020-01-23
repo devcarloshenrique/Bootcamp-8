@@ -1,0 +1,25 @@
+1 -- Sucraze => Atilizado para usar a sintaxe import em vez do require
+
+	|yarn add sucrase|
+
+2 -- Configurando o nodemon para reconhecer reconhecer e inicializar os arquivos js com sucrase em vez do node.
+
+	2.1 -> criar um aquivo |nodemon.json|
+
+	2.1 -> Acrescentar o seguinte json: 
+
+	-> Todo arquivo js inicializado com nodemon será executado com sucrase em vez do node
+
+
+		{
+			"execMap": {
+
+				"js": "sucrase-node"
+
+			}
+		
+	
+		}
+	
+	
+		
