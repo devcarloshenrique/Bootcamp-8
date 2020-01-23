@@ -20,6 +20,17 @@
 		
 	
 		}
+
+
 	
-	
+
+3 -- Configurando o Docker
+
+	3.1 -> Após instal o Docker de acordo com a versão do windows 
+
+	3.2 Abrir o terminal e digitar o seguinte code.
+
+	-> para achar esse code, basta pesquisar docker postgres.
+
+		|docker run --name nomedabasededados -e POSGRESS_PASSWORD=senhadabasededados -p minhaporta:5432(porta padrão do postgress) -d postgres|
 		
