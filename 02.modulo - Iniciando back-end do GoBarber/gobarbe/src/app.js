@@ -1,5 +1,5 @@
-const express = require('express');
-const routes = require('./routes');
+import express from 'express';
+import routes from './routes';
 
 class App {
   
@@ -28,4 +28,4 @@ class App {
 }
 
 // O único atributo ou metodo que pode ser acessado é o server;
-module.exports = new App().server;
+export default new App().server;
