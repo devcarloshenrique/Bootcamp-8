@@ -24,13 +24,115 @@
 
 	
 
-3 -- Configurando o Docker
+3 -- Configurando postgres via docker
 
-	3.1 -> Após instal o Docker de acordo com a versão do windows 
+	3.1 -> Após instal o Docker de acordo com a versão do windows (no meu caso instalei o docker Tollbox)
 
 	3.2 Abrir o terminal e digitar o seguinte code.
 
-	-> para achar esse code, basta pesquisar docker postgres.
+	
+		-> Baixar image do postgres 
 
-		|docker run --name nomedabasededados -e POSGRESS_PASSWORD=senhadabasededados -p minhaporta:5432(porta padrão do postgress) -d postgres|
+			|docker pull postgres|
+
+		-> Verificando se a imagem foi baixada
+
+			|docker images|
+
+		-> Criando container com postgres
+
+			|docker run --name (nomedb) -e POSTGRES_PASSWORD=(senhabd) -d -p 5432:5432 postgres|
+
+
+4 -- Criando banco postgres no terminal docker 
+
+	4.0 Comando para acessar o banco 
+
+		| winpty docker exec -it database psql -U postgres --password |
+
+
+	4.1 AGORA ESTAMOS NO PSQL
+
+		-> Comando para criar a base de dados 
+
+			|create database (nomebd);|		
+
+
+	
+
+
+5 -- Configurando padrão de identação 
+
+	5.0 Dependência para verificação de padrão de code
+
+		| yarn add eslint |
+
+	5.1 Configurando o eslint
+
+		| yarn eslint --init |
+
+	-> 1° opção
+
+		- To check syntax, find problems...
+	
+	-> 2° opção 
 		
+		- Padrão no qual estou utilizando 
+
+	-> 3° opção 
+
+		- Não estou utilizando react nem vue 
+
+	-> 4° opção, Browser ou Node 
+
+		- space para desmarca e marcar novamente.
+
+	-> 5° opção
+		
+		- Use popular style guide 
+
+			- Airbnb
+ 
+	-> 6° opção
+
+		- Javascript
+
+	5.2 Gerando arquivo .eslintrc.js
+
+		-> apagar o arquivo packge-lock-json, não queremos esse arquivo pq ele é gerado via npm e estvamos usando 
+apenas yarn .
+
+		-> Gerando o arquivo .eslintrc.js, basta apenas executar o yarn novamente, após apagar.
+
+			|yarn|
+
+	5.3 Instalar dependência ELList no vscode.
+
+		|yarn add eslint|
+
+
+	5.4 Instalando dependência Prettier no vscode.
+
+		| yarn add prettier eslint-config-prettier eslint-plugin-prettier -D |		
+
+	5.5 Identando todos os arquivos de uma vez
+
+		|yarn eslint --fix src --ext .js|					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
