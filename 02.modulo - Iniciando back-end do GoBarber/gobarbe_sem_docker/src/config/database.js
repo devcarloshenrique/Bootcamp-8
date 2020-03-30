@@ -1,4 +1,4 @@
-// Este arquivo não pode a sitaxe do sucrese pois vai ser acessado tanto pela aplicação quanto pelo sequelize
+// Este arquivo não suporta pode a sitaxe do sucrese pois vai ser acessado tanto pela aplicação quanto pelo sequelize
 module.exports = {
   dialect: 'postgres',
   host: 'localhost',
