@@ -33,6 +33,16 @@ class User extends Model {
     // Quando é chama criado this.addHook, é consciderado boa pratica retornar o this
     return this;
   }
+
+  /* Esta verificação de senha não é consciderada regra de negocio, logo não é necessário fazer este metodo nos
+   * controllers
+   */
+  checkPassword(password) {
+    /* Sera realizada uma verificação com bcrypt no banco, que retorna true se
+     * password == password_hash(Coluna do banco)
+     */
+    return bcrypt.compare(password, this.password_hash);
+  }
 }
 
 export default User;
