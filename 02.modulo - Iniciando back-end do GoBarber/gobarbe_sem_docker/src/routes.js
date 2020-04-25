@@ -6,8 +6,8 @@ import multerConfig from './config/multer';
 
 // Importando o metodo store do controller user que é responsável por criar os user
 import UserController from './app/controllers/UserController';
-
 import SessionController from './app/controllers/SessionController';
+import FileController from './app/controllers/FileController';
 
 // importando autenticação de token
 import authMiddleware from './app/middlewares/auth';
@@ -28,7 +28,5 @@ routes.put('/users', UserController.update);
 /* utilizamos single pois queremos fazer upload de um arquivo por vez e não varios
  * file é o nome do campo que será enviado pela requisição
  */
-routes.post('/files', upload.single('file'), (req, res) => {
-  return res.json({ ok: true });
-});
+routes.post('/files', upload.single('file'), FileController.store);
 export default routes;
