@@ -34,6 +34,12 @@ class User extends Model {
     return this;
   }
 
+  // metodo criado para associar o campo users.id_avatar e files.id
+  static associate(models) {
+    // Pertence á
+    this.belongsTo(models.File, { foreignKey: 'avatar_id' });
+  }
+
   /* Esta verificação de senha não é consciderada regra de negocio, logo não é necessário fazer este metodo nos
    * controllers
    */
