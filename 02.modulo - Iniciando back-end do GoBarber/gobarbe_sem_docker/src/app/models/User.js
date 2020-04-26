@@ -36,8 +36,8 @@ class User extends Model {
 
   // metodo criado para associar o campo users.id_avatar e files.id
   static associate(models) {
-    // Pertence á
-    this.belongsTo(models.File, { foreignKey: 'avatar_id' });
+    // Pertence á || este as avatar é para quando vim a res, vim com o nome avatar e não File
+    this.belongsTo(models.File, { foreignKey: 'avatar_id', as: 'avatar' });
   }
 
   /* Esta verificação de senha não é consciderada regra de negocio, logo não é necessário fazer este metodo nos
