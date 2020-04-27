@@ -9,6 +9,7 @@ import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import FileController from './app/controllers/FileController';
 import ProviderController from './app/controllers/ProviderController';
+import AppointmentControler from './app/controllers/AppointmentController';
 
 // importando autenticação de token
 import authMiddleware from './app/middlewares/auth';
@@ -27,6 +28,8 @@ routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 
 routes.get('/providers', ProviderController.index);
+
+routes.post('/appointments', AppointmentControler.store);
 
 /* utilizamos single pois queremos fazer upload de um arquivo por vez e não varios
  * file é o nome do campo que será enviado pela requisição
