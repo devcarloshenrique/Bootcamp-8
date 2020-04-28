@@ -30,6 +30,7 @@ routes.put('/users', UserController.update);
 routes.get('/providers', ProviderController.index);
 
 routes.post('/appointments', AppointmentControler.store);
+routes.get('/appointments', AppointmentControler.index);
 
 /* utilizamos single pois queremos fazer upload de um arquivo por vez e não varios
  * file é o nome do campo que será enviado pela requisição
