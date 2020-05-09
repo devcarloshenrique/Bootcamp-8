@@ -37,6 +37,7 @@ routes.get('/appointments', AppointmentController.index);
 routes.get('/schedule', ScheduleController.index);
 
 routes.get('/notifications', NotificationController.index);
+routes.put('/notifications/:id', NotificationController.update);
 
 /* utilizamos single pois queremos fazer upload de um arquivo por vez e não varios
  * file é o nome do campo que será enviado pela requisição
