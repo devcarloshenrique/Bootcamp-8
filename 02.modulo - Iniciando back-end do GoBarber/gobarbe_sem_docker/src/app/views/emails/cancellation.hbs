@@ -1,0 +1,15 @@
+<strong>Olá, {{ provider }} </strong>
+
+<p> Houve um cancelamento de hórario, confira os detalhes abaixo </p>
+<p>
+  {{!--
+    - As variaveis user e date seram enviadas pelo AppointmentController
+   --}}
+  <strong>Cliente: </strong> {{ user }} <br />
+  <strong>Data/hora: </strong> {{ date }} <br />
+  <br />
+  <small>
+    O hórario está novamente disponível para novos agendamentos.
+  </small>
+
+</p>
