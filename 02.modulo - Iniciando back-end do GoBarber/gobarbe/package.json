@@ -13,7 +13,7 @@
     "pg": "^7.18.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.3",
-    "yarn": "^1.21.1",
+    "yarn": "^1.22.0",
     "yup": "^0.28.1"
   },
   "devDependencies": {
